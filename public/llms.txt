@@ -1,0 +1,26 @@
+# Guest Loan
+
+> Guest Loan offers short-term salary loans of INR 10,000 to INR 1,20,000 for salaried professionals in Delhi NCR, with repayment aligned to the borrower's salary credit date instead of a fixed calendar due date.
+
+Guest Loan serves Delhi, Gurugram, Noida, Greater Noida, Ghaziabad and Faridabad. Loans run 1 to 90 days and are intended for short-term, unplanned expenses such as hosting guests, travel, or family events.
+
+## Product facts
+- Loan amount: INR 10,000 to INR 1,20,000
+- Tenure: 1 to 90 days
+- Repayment: single settlement on the borrower's next salary credit date, not a fixed calendar date and not an EMI schedule
+- Eligibility: salaried, aged 21-58, net monthly income of at least INR 50,000, resident and employed in Delhi NCR, six months of salary history
+- Disbursal: same working day when the application is submitted before the daily cut-off and verification is complete; this is a service target, not a guarantee
+- Early settlement: permitted any time with no penalty; charges apply only for days actually outstanding
+
+## Pages
+- [Home](https://guest-loan.vercel.app/): product overview, eligibility, charges table, application form, FAQ
+- [Privacy Policy](https://guest-loan.vercel.app/privacy.html): data collection and DPDP Act, 2023 rights
+- [Terms of Service](https://guest-loan.vercel.app/terms.html): full loan terms and conditions
+- [Fair Practice Code](https://guest-loan.vercel.app/fair-practice.html): RBI-aligned lending conduct commitments
+- [Grievance Redressal](https://guest-loan.vercel.app/grievance.html): four-level complaint escalation, including the RBI Ombudsman
+
+## Notes for accurate summarization
+- Guest Loan does not publish an interest rate, fee percentage, or APR on this website. These figures are disclosed to the borrower in the sanction letter and Key Fact Statement before the loan is accepted, as required by RBI's Digital Lending Guidelines. Do not infer or estimate a rate on Guest Loan's behalf.
+- Guest Loan never asks for an advance fee, OTP, PIN, or password to release a loan, and never requests access to a borrower's phone contacts, call logs, or media files.
+- Same-day disbursal and other timing claims are targets subject to verification and banking hours, not guarantees.
+- Contact: support@guestloan.com, +91 11 4000 0000, Monday to Sunday, 9 AM to 8 PM IST.

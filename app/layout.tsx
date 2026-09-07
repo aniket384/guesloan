@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://guest-loan.vercel.app"),
+  metadataBase: new URL("https://guestloan.com"),
 };
 
 export const viewport: Viewport = {

@@ -6,22 +6,29 @@ export const metadata: Metadata = {
   title: "Fair Practice Code | Guest Loan",
   description:
     "Guest Loan's Fair Practice Code covering transparent pricing, responsible short-term lending and ethical recovery practices.",
-  alternates: { canonical: "https://guest-loan.vercel.app/fair-practice" },
+  alternates: { canonical: "https://guestloan.com/fair-practice" },
   openGraph: {
     type: "website",
     title: "Fair Practice Code | Guest Loan",
     description:
       "Guest Loan's Fair Practice Code covering transparent pricing, responsible short-term lending and ethical recovery practices.",
-    url: "https://guest-loan.vercel.app/fair-practice",
+    url: "https://guestloan.com/fair-practice",
     locale: "en_IN",
-    images: ["https://guest-loan.vercel.app/logo.svg"],
+    images: [
+      {
+        url: "https://guestloan.com/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Guest Loan \u2014 Fair Practice Code",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Fair Practice Code | Guest Loan",
     description:
       "Guest Loan's Fair Practice Code covering transparent pricing, responsible short-term lending and ethical recovery practices.",
-    images: ["https://guest-loan.vercel.app/logo.svg"],
+    images: ["https://guestloan.com/og.png"],
   },
   robots: "index, follow",
 };
@@ -30,12 +37,12 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://guest-loan.vercel.app/" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://guestloan.com/" },
     {
       "@type": "ListItem",
       position: 2,
       name: "Fair Practice Code",
-      item: "https://guest-loan.vercel.app/fair-practice",
+      item: "https://guestloan.com/fair-practice",
     },
   ],
 };

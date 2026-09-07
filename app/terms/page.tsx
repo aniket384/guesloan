@@ -6,22 +6,29 @@ export const metadata: Metadata = {
   title: "Terms of Service | Guest Loan",
   description:
     "Terms governing use of the Guest Loan website and short-term salary loans of 1 to 90 days for salaried professionals in Delhi NCR.",
-  alternates: { canonical: "https://guest-loan.vercel.app/terms" },
+  alternates: { canonical: "https://guestloan.com/terms" },
   openGraph: {
     type: "website",
     title: "Terms of Service | Guest Loan",
     description:
       "Terms governing use of the Guest Loan website and short-term salary loans of 1 to 90 days for salaried professionals in Delhi NCR.",
-    url: "https://guest-loan.vercel.app/terms",
+    url: "https://guestloan.com/terms",
     locale: "en_IN",
-    images: ["https://guest-loan.vercel.app/logo.svg"],
+    images: [
+      {
+        url: "https://guestloan.com/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Guest Loan \u2014 Terms of Service",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Terms of Service | Guest Loan",
     description:
       "Terms governing use of the Guest Loan website and short-term salary loans of 1 to 90 days for salaried professionals in Delhi NCR.",
-    images: ["https://guest-loan.vercel.app/logo.svg"],
+    images: ["https://guestloan.com/og.png"],
   },
   robots: "index, follow",
 };
@@ -30,8 +37,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://guest-loan.vercel.app/" },
-    { "@type": "ListItem", position: 2, name: "Terms of Service", item: "https://guest-loan.vercel.app/terms" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://guestloan.com/" },
+    { "@type": "ListItem", position: 2, name: "Terms of Service", item: "https://guestloan.com/terms" },
   ],
 };
 
@@ -57,7 +64,7 @@ export default function TermsPage() {
       <p>
         This website is operated by [Legal entity name to be confirmed] (&ldquo;Guest
         Loan&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;), having its registered office at
-        [Registered office address to be confirmed], New Delhi, India, with Corporate
+        Gurugram, India, with Corporate
         Identity Number [CIN to be confirmed].
       </p>
       <p>
@@ -246,7 +253,7 @@ export default function TermsPage() {
           <br />
           Phone: <a href={`tel:${CONTACT.supportPhoneE164}`}>{CONTACT.supportPhoneDisplay}</a>
           <br />
-          Address: [Registered office address to be confirmed], New Delhi, India
+          Address: Gurugram, India
           <br />
           Hours: {CONTACT.hours}
         </p>

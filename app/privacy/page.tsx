@@ -6,22 +6,29 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Guest Loan",
   description:
     "How Guest Loan collects, uses, stores and protects your personal information under the DPDP Act, 2023.",
-  alternates: { canonical: "https://guest-loan.vercel.app/privacy" },
+  alternates: { canonical: "https://guestloan.com/privacy" },
   openGraph: {
     type: "website",
     title: "Privacy Policy | Guest Loan",
     description:
       "How Guest Loan collects, uses, stores and protects your personal information under the DPDP Act, 2023.",
-    url: "https://guest-loan.vercel.app/privacy",
+    url: "https://guestloan.com/privacy",
     locale: "en_IN",
-    images: ["https://guest-loan.vercel.app/logo.svg"],
+    images: [
+      {
+        url: "https://guestloan.com/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Guest Loan \u2014 Privacy Policy",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Privacy Policy | Guest Loan",
     description:
       "How Guest Loan collects, uses, stores and protects your personal information under the DPDP Act, 2023.",
-    images: ["https://guest-loan.vercel.app/logo.svg"],
+    images: ["https://guestloan.com/og.png"],
   },
   robots: "index, follow",
 };
@@ -30,8 +37,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://guest-loan.vercel.app/" },
-    { "@type": "ListItem", position: 2, name: "Privacy Policy", item: "https://guest-loan.vercel.app/privacy" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://guestloan.com/" },
+    { "@type": "ListItem", position: 2, name: "Privacy Policy", item: "https://guestloan.com/privacy" },
   ],
 };
 
@@ -201,7 +208,7 @@ export default function PrivacyPage() {
           <br />
           Phone: <a href={`tel:${CONTACT.grievancePhoneE164}`}>{CONTACT.grievancePhoneDisplay}</a>
           <br />
-          Address: [Registered office address to be confirmed], New Delhi, India
+          Address: Gurugram, India
           <br />
           Hours: {CONTACT.hours}
         </p>

@@ -6,22 +6,29 @@ export const metadata: Metadata = {
   title: "Grievance Redressal | Guest Loan",
   description:
     "How to raise a complaint with Guest Loan, our four-level escalation process, and how to escalate to the RBI Ombudsman.",
-  alternates: { canonical: "https://guest-loan.vercel.app/grievance" },
+  alternates: { canonical: "https://guestloan.com/grievance" },
   openGraph: {
     type: "website",
     title: "Grievance Redressal | Guest Loan",
     description:
       "How to raise a complaint with Guest Loan, our four-level escalation process, and how to escalate to the RBI Ombudsman.",
-    url: "https://guest-loan.vercel.app/grievance",
+    url: "https://guestloan.com/grievance",
     locale: "en_IN",
-    images: ["https://guest-loan.vercel.app/logo.svg"],
+    images: [
+      {
+        url: "https://guestloan.com/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Guest Loan \u2014 Grievance Redressal",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Grievance Redressal | Guest Loan",
     description:
       "How to raise a complaint with Guest Loan, our four-level escalation process, and how to escalate to the RBI Ombudsman.",
-    images: ["https://guest-loan.vercel.app/logo.svg"],
+    images: ["https://guestloan.com/og.png"],
   },
   robots: "index, follow",
 };
@@ -30,12 +37,12 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://guest-loan.vercel.app/" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://guestloan.com/" },
     {
       "@type": "ListItem",
       position: 2,
       name: "Grievance Redressal",
-      item: "https://guest-loan.vercel.app/grievance",
+      item: "https://guestloan.com/grievance",
     },
   ],
 };
@@ -104,7 +111,7 @@ export default function GrievancePage() {
           <b>Phone:</b>{" "}
           <a href={`tel:${CONTACT.grievancePhoneE164}`}>{CONTACT.grievancePhoneDisplay}</a>
           <br />
-          <b>Address:</b> [Registered office address to be confirmed], New Delhi, India
+          <b>Address:</b> Gurugram, India
         </p>
         <p className="meta">
           Acknowledgement within 48 hours &middot; Resolution target: 30 days from first

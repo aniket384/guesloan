@@ -9,26 +9,32 @@ import { ShieldIcon } from "@/components/Logo";
 import { CONTACT, SITE } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title:
-    "Guest Loan | Short-Term Salary Loans \u20b910,000 \u2013 \u20b91,20,000 | Same-Day Disbursal in Delhi NCR",
+  title: "Guest Loan | Salary Loans \u20b910,000\u2013\u20b91,20,000 in Delhi NCR",
   description:
-    "Guest Loan offers short-term salary loans from \u20b910,000 to \u20b91,20,000 for salaried professionals across Delhi NCR. Tenure 1 to 90 days, repay on your salary date, same-day disbursal. Apply Fast, Get Faster.",
-  alternates: { canonical: "https://guest-loan.vercel.app/" },
+    "Salary loans of \u20b910,000 to \u20b91,20,000 for salaried professionals in Delhi NCR. Repay on your salary date, with same-day disbursal. Apply Fast, Get Faster.",
+  alternates: { canonical: "https://guestloan.com/" },
   openGraph: {
     type: "website",
     title: "Guest Loan | Apply Fast, Get Faster \u2014 Same-Day Salary Loans in Delhi NCR",
     description:
       "Short-term salary loans from \u20b910,000 to \u20b91,20,000. Repay on your salary date, with same-day disbursal across Delhi NCR.",
-    url: "https://guest-loan.vercel.app/",
+    url: "https://guestloan.com/",
     locale: "en_IN",
-    images: ["https://guest-loan.vercel.app/logo.svg"],
+    images: [
+      {
+        url: "https://guestloan.com/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Guest Loan \u2014 salary loans \u20b910,000 to \u20b91,20,000, same-day disbursal across Delhi NCR",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Guest Loan | Apply Fast, Get Faster",
     description:
       "Short-term salary loans from \u20b910,000 to \u20b91,20,000. Repay on your salary date, with same-day disbursal across Delhi NCR.",
-    images: ["https://guest-loan.vercel.app/logo.svg"],
+    images: ["https://guestloan.com/og.png"],
   },
   robots: "index, follow",
 };
@@ -40,10 +46,10 @@ const financialServiceSchema = {
   slogan: "Apply Fast, Get Faster",
   description:
     "Short-term salary loans from INR 10,000 to INR 1,20,000 with tenure of 1 to 90 days, repayment on your salary date and same-day disbursal for salaried professionals across Delhi NCR.",
-  url: "https://guest-loan.vercel.app/",
-  logo: "https://guest-loan.vercel.app/logo.svg",
-  image: "https://guest-loan.vercel.app/logo.svg",
-  telephone: CONTACT.supportPhoneE164.replace("+91", "+91-"),
+  url: "https://guestloan.com/",
+  logo: "https://guestloan.com/logo-512.png",
+  image: "https://guestloan.com/og.png",
+  telephone: CONTACT.supportPhoneE164,
   email: CONTACT.supportEmail,
   openingHours: "Mo-Su 09:00-20:00",
   areaServed: SITE.cities.map((name) => ({ "@type": "City", name })),
@@ -65,7 +71,7 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Guest Loan",
-  url: "https://guest-loan.vercel.app/",
+  url: "https://guestloan.com/",
 };
 
 const faqSchema = {
@@ -77,7 +83,7 @@ const faqSchema = {
       name: "How much can I borrow and for how long?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Guest Loan offers short-term loans from INR 10,000 up to INR 1,20,000, with a tenure of 1 to 90 days. The exact amount depends on net monthly salary, employment history, existing obligations and the outcome of verification.",
+        text: "Guest Loan offers short-term loans from \u20b910,000 up to \u20b91,20,000, with a tenure of 1 to 90 days. The exact amount you qualify for depends on your net monthly salary, employment history, existing obligations and the outcome of verification.",
       },
     },
     {
@@ -85,7 +91,7 @@ const faqSchema = {
       name: "When do I have to repay?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The repayment date is set to the borrower's next salary credit date, so the amount falls due when the salary reaches their account. The exact due date and amount are stated in the sanction letter. Repayment is a single settlement, not a series of EMIs.",
+        text: "Your repayment date is set to your next salary credit date, so the amount falls due when your salary reaches your account. You tell us your salary date during the verification call, and the exact due date and amount are stated in your sanction letter. Repayment is a single settlement, not a series of EMIs.",
       },
     },
     {
@@ -93,7 +99,7 @@ const faqSchema = {
       name: "What if my salary is delayed?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Borrowers should contact the support team before the due date if a salary credit is delayed, so options can be discussed rather than letting a payment fail.",
+        text: "Contact our support team before the due date. If your employer has shifted your salary cycle or a credit is delayed, tell us as early as possible so we can discuss the options available to you rather than letting a payment fail.",
       },
     },
     {
@@ -101,7 +107,7 @@ const faqSchema = {
       name: "Is disbursal really same-day?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Where an application is submitted before the daily cut-off, verification is completed and the loan is sanctioned, the amount is credited the same working day. Timing depends on document submission, banking processing, and working days and holidays. It is not guaranteed in every case.",
+        text: "Where your application is submitted before the daily cut-off, verification is completed and the loan is sanctioned, the amount is credited the same working day. Timing depends on how quickly you provide documents, on your bank\u2019s processing, and on working days and holidays. It is not guaranteed in every case.",
       },
     },
     {
@@ -109,7 +115,7 @@ const faqSchema = {
       name: "Who is eligible to apply?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Salaried professionals aged 21 to 58, living and working within Delhi NCR, with a net take-home salary of at least INR 50,000 credited to a bank account for the last six months. Guest Loan serves Delhi, Gurugram, Noida, Greater Noida, Ghaziabad and Faridabad.",
+        text: "Salaried professionals aged 21 to 58, living and working within Delhi NCR, with a net take-home salary of at least \u20b950,000 credited to a bank account for the last six months. We serve Delhi, Gurugram, Noida, Greater Noida, Ghaziabad and Faridabad.",
       },
     },
     {
@@ -117,7 +123,7 @@ const faqSchema = {
       name: "What will this cost me in total?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The sanction letter and Key Fact Statement set out the total amount repayable, every individual charge, applicable taxes and the Annual Percentage Rate, all before the loan is accepted. Borrowers are charged only for the number of days the loan is actually outstanding.",
+        text: "Your sanction letter and Key Fact Statement set out the total rupee amount repayable, every individual charge, applicable taxes and the Annual Percentage Rate \u2014 all before you accept the loan. You are charged only for the number of days the loan is actually outstanding. Read these documents carefully and ask us about anything that is not clear before you sign.",
       },
     },
     {
@@ -125,7 +131,7 @@ const faqSchema = {
       name: "Can I settle early?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, at any time and with no early closure penalty. Borrowers are charged only for the number of days the loan was actually outstanding.",
+        text: "Yes, at any time and with no early closure penalty. You are charged only for the number of days the loan was actually outstanding. Contact customer support for a closure statement before making the payment.",
       },
     },
     {
@@ -133,7 +139,7 @@ const faqSchema = {
       name: "Do I need to upload documents on this website?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. The enquiry form collects only name, mobile number, email, city, loan amount, salary date and address. Documents are collected later through a verified channel after the team makes contact directly.",
+        text: "No. This form collects only your name, mobile number, email, city, loan amount, salary date and address. Documents are collected later through a verified channel after our team contacts you directly. Never share Aadhaar, PAN or bank statements through an unverified link or with anyone contacting you from an unofficial number.",
       },
     },
     {
@@ -141,7 +147,7 @@ const faqSchema = {
       name: "Will applying affect my credit score?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Submitting the enquiry form does not affect a credit score. If a formal credit bureau check becomes necessary later in the process, the applicant is informed before it happens.",
+        text: "Submitting this enquiry form does not affect your credit score. If a formal credit bureau check becomes necessary later in the process, we will tell you before it happens.",
       },
     },
     {
@@ -149,7 +155,7 @@ const faqSchema = {
       name: "How do I raise a complaint?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Complaints can be raised with the Grievance Redressal Officer using the details on the Grievance Redressal page. Complaints are acknowledged within 48 hours and Guest Loan aims to resolve them within 30 days.",
+        text: "Write to our Grievance Redressal Officer using the details on our Grievance Redressal page. We acknowledge complaints within 48 hours and aim to resolve them within 30 days.",
       },
     },
   ],
@@ -1195,9 +1201,7 @@ export default function HomePage() {
               <div className="cc reveal">
                 <div className="lbl">Registered office</div>
                 <p>
-                  [Registered office address to be confirmed]
-                  <br />
-                  New Delhi, India
+                  Gurugram, India
                 </p>
               </div>
             </div>

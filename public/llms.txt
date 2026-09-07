@@ -13,11 +13,11 @@ Guest Loan serves Delhi, Gurugram, Noida, Greater Noida, Ghaziabad and Faridabad
 - Early settlement: permitted any time with no penalty; charges apply only for days actually outstanding
 
 ## Pages
-- [Home](https://guest-loan.vercel.app/): product overview, eligibility, charges table, application form, FAQ
-- [Privacy Policy](https://guest-loan.vercel.app/privacy.html): data collection and DPDP Act, 2023 rights
-- [Terms of Service](https://guest-loan.vercel.app/terms.html): full loan terms and conditions
-- [Fair Practice Code](https://guest-loan.vercel.app/fair-practice.html): RBI-aligned lending conduct commitments
-- [Grievance Redressal](https://guest-loan.vercel.app/grievance.html): four-level complaint escalation, including the RBI Ombudsman
+- [Home](https://guestloan.com/): product overview, eligibility, charges table, application form, FAQ
+- [Privacy Policy](https://guestloan.com/privacy): data collection and DPDP Act, 2023 rights
+- [Terms of Service](https://guestloan.com/terms): full loan terms and conditions
+- [Fair Practice Code](https://guestloan.com/fair-practice): RBI-aligned lending conduct commitments
+- [Grievance Redressal](https://guestloan.com/grievance): four-level complaint escalation, including the RBI Ombudsman
 
 ## Notes for accurate summarization
 - Guest Loan does not publish an interest rate, fee percentage, or APR on this website. These figures are disclosed to the borrower in the sanction letter and Key Fact Statement before the loan is accepted, as required by RBI's Digital Lending Guidelines. Do not infer or estimate a rate on Guest Loan's behalf.

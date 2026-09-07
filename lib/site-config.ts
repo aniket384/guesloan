@@ -25,7 +25,7 @@ export const CONTACT = {
 export const SITE = {
   name: "Guest Loan",
   tagline: "Apply Fast, Get Faster",
-  url: "https://guest-loan.vercel.app",
+  url: "https://guestloan.com",
   loanMin: "\u20b910,000",
   loanMax: "\u20b91,20,000",
   tenure: "1 to 90 days",

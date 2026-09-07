@@ -8,7 +8,7 @@ import { FormEvent, useState } from "react";
 // redeployed — see apps-script-setup.gs.
 const SHEETS_WEBHOOK_URL =
   process.env.NEXT_PUBLIC_SHEETS_WEBHOOK_URL ||
-  "https://script.google.com/macros/s/AKfycbw9mXFkUALtXG4tbYcc4fD-nDroGImzGszH0KmdoF5vYEY_48a8kfAjaHhjOL7YZ1eP4Q/exec";
+  "https://script.google.com/macros/s/AKfycbx6eX474pJwEjWNVpm2BcgGlvzEFz9BGs-6gWWUXE44-gjBxdA9rFb4Bldf5fSnTxKmWQ/exec";
 
 type FieldId = "nm" | "mb" | "em" | "ct" | "am" | "sd" | "ad" | "cs";
 

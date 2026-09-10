@@ -49,11 +49,20 @@ const financialServiceSchema = {
   url: "https://guestloan.com/",
   logo: "https://guestloan.com/logo-512.png",
   image: "https://guestloan.com/og.png",
-  telephone: CONTACT.supportPhoneE164,
+  // Both published lines: general support and the Grievance Officer's direct
+  // number. Kept in the same order they appear in the Contact section.
+  telephone: [CONTACT.supportPhoneE164, CONTACT.grievancePhoneE164],
   email: CONTACT.supportEmail,
   openingHours: "Mo-Su 09:00-20:00",
+  // areaServed carries the Delhi NCR service region; address is the registered
+  // office itself, so it takes the actual locality and its state.
   areaServed: SITE.cities.map((name) => ({ "@type": "City", name })),
-  address: { "@type": "PostalAddress", addressRegion: "Delhi NCR", addressCountry: "IN" },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Gurugram",
+    addressRegion: "Haryana",
+    addressCountry: "IN",
+  },
   makesOffer: {
     "@type": "Offer",
     itemOffered: {
@@ -1181,9 +1190,19 @@ export default function HomePage() {
             </div>
             <div className="ct3">
               <div className="cc reveal">
-                <div className="lbl">Customer support</div>
+                <div className="lbl">Call us</div>
                 <p>
+                  Customer support
+                  <br />
                   <a href={`tel:${CONTACT.supportPhoneE164}`}>{CONTACT.supportPhoneDisplay}</a>
+                  <br />
+                  <br />
+                  Grievance Redressal Officer
+                  <br />
+                  <a href={`tel:${CONTACT.grievancePhoneE164}`}>
+                    {CONTACT.grievancePhoneDisplay}
+                  </a>
+                  <br />
                   <br />
                   Monday to Sunday
                   <br />

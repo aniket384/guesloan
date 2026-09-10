@@ -3,7 +3,8 @@
  * ------------------------------------------------
  * What this does, each time someone submits the form on the website:
  *   1. Appends a new row to a "Leads" sheet in this spreadsheet.
- *   2. Emails the full details to contact@guestloan.com.
+ *   2. Optionally emails the full details to NOTIFY_EMAIL below. That is
+ *      empty by default, so no email is sent until you set an address.
  *
  * SETUP (one time, about 5 minutes):
  *   1. Go to https://sheets.google.com and create a new blank spreadsheet.

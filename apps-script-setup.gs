@@ -19,16 +19,32 @@
  *      "Advanced" > "Go to (project name)" if you see an "unverified app"
  *      warning; that warning appears for all personal Apps Script projects.
  *   8. Copy the "Web app" URL shown after deployment (it ends in /exec).
- *   9. Paste that URL into index.html, replacing the placeholder marked
- *      SHEETS_WEBHOOK_URL near the top of the page's <script> block
- *      (search for "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE"), then
- *      redeploy the site.
+ *   9. Put that URL into the site as NEXT_PUBLIC_SHEETS_WEBHOOK_URL in
+ *      .env.local (see .env.local.example), and update the hardcoded
+ *      fallback at the top of components/ApplyForm.tsx to match. Both
+ *      need to agree, or the form posts to the retired endpoint whenever
+ *      the env var is unset. Then redeploy the site.
  *
- * Every submission after that will land as a new row in the "Leads" tab
- * and as an email to contact@guestloan.com.
+ * CHANGING THIS FILE LATER:
+ *   This file is only a reference copy kept in the repo — editing it does
+ *   nothing on its own. The running code lives in the Apps Script editor,
+ *   so paste the new version in there and redeploy.
+ *   To keep the same /exec URL, use Deploy > Manage deployments > (pencil
+ *   icon) > Version: New version > Deploy. Choosing "New deployment"
+ *   instead mints a *new* URL, which then has to be updated in both places
+ *   listed in step 9.
+ *
+ * Every submission lands as a new row in the "Leads" tab. A notification
+ * email is sent only if NOTIFY_EMAIL below is set to an address.
  */
 
-var NOTIFY_EMAIL = 'contact@guestloan.com';
+// Address that receives a notification for each new enquiry.
+// Leave this as '' to turn notification emails off entirely — leads still
+// land in the "Leads" sheet either way, so nothing is lost by disabling it.
+// Do not point this at a personal Gmail account: the script runs as whoever
+// deployed it, so a personal address ends up both sending and receiving every
+// lead, and the send counts against that account's 100/day MailApp quota.
+var NOTIFY_EMAIL = '';
 
 function doPost(e) {
   try {
@@ -75,7 +91,18 @@ function doPost(e) {
       'Submitted at: ' + new Date().toString() + '\n\n' +
       'This lead has also been added to the "Leads" tab of the spreadsheet.';
 
-    MailApp.sendEmail(NOTIFY_EMAIL, subject, body);
+    // The row above is already committed, so a mail failure must not fail the
+    // whole request. MailApp is capped at 100 emails/day on consumer accounts;
+    // without this guard, hitting that quota would throw, land in the catch
+    // below, and tell the applicant their submission failed even though the
+    // lead was saved — prompting duplicate submissions or a lost enquiry.
+    if (NOTIFY_EMAIL) {
+      try {
+        MailApp.sendEmail(NOTIFY_EMAIL, subject, body);
+      } catch (mailErr) {
+        console.error('Lead saved, notification email failed: ' + mailErr);
+      }
+    }
 
     return ContentService
       .createTextOutput(JSON.stringify({ result: 'success' }))

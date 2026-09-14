@@ -104,6 +104,12 @@ export default function Footer({ isHome = false }: { isHome?: boolean }) {
             &copy; 2026 Guest Loan. All rights reserved. Serving Delhi, Gurugram,
             Noida, Greater Noida, Ghaziabad and Faridabad.
           </p>
+          {isHome && (
+            <p style={{ fontSize: "8px" }}>
+              We are not representing any NBFC, bank or government financial
+              institution. We are working as a financial consultancy only.
+            </p>
+          )}
         </div>
       </div>
     </footer>

@@ -3,8 +3,7 @@
  * ------------------------------------------------
  * What this does, each time someone submits the form on the website:
  *   1. Appends a new row to a "Leads" sheet in this spreadsheet.
- *   2. Optionally emails the full details to NOTIFY_EMAIL below. That is
- *      empty by default, so no email is sent until you set an address.
+ *   2. Emails the full details to NOTIFY_EMAIL below (contact@guestloan.com).
  *
  * SETUP (one time, about 5 minutes):
  *   1. Go to https://sheets.google.com and create a new blank spreadsheet.
@@ -40,12 +39,11 @@
  */
 
 // Address that receives a notification for each new enquiry.
-// Leave this as '' to turn notification emails off entirely — leads still
-// land in the "Leads" sheet either way, so nothing is lost by disabling it.
-// Do not point this at a personal Gmail account: the script runs as whoever
-// deployed it, so a personal address ends up both sending and receiving every
-// lead, and the send counts against that account's 100/day MailApp quota.
-var NOTIFY_EMAIL = '';
+// Set to '' to turn notification emails off — leads still land in the
+// "Leads" sheet either way. Avoid a personal Gmail account here: the script
+// runs as whoever deployed it, so a personal address ends up both sending
+// and receiving every lead.
+var NOTIFY_EMAIL = 'contact@guestloan.com';
 
 function doPost(e) {
   try {
@@ -89,6 +87,7 @@ function doPost(e) {
       'Salary date: ' + (data.salaryDate || '-') + '\n' +
       'Address: ' + (data.address || '-') + '\n' +
       'Consent given: ' + (data.consent ? 'Yes' : 'No') + '\n' +
+      'Source: ' + (data.source || '-') + '\n' +
       'Submitted at: ' + new Date().toString() + '\n\n' +
       'This lead has also been added to the "Leads" tab of the spreadsheet.';
 

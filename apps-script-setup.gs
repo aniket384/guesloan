@@ -76,20 +76,17 @@ function doPost(e) {
       data.source || ''
     ]);
 
-    var subject = 'New Guest Loan enquiry — ' + (data.fullName || 'Unknown');
+    var subject = 'New Loan Enquiry';
     var body =
-      'A new loan enquiry was submitted on the Guest Loan website.\n\n' +
-      'Name: ' + (data.fullName || '-') + '\n' +
-      'Mobile: ' + (data.mobile || '-') + '\n' +
-      'Email: ' + (data.email || '-') + '\n' +
-      'City: ' + (data.city || '-') + '\n' +
-      'Loan amount requested: ' + (data.amount || '-') + '\n' +
-      'Salary date: ' + (data.salaryDate || '-') + '\n' +
-      'Address: ' + (data.address || '-') + '\n' +
-      'Consent given: ' + (data.consent ? 'Yes' : 'No') + '\n' +
-      'Source: ' + (data.source || '-') + '\n' +
-      'Submitted at: ' + new Date().toString() + '\n\n' +
-      'This lead has also been added to the "Leads" tab of the spreadsheet.';
+      'Hi GuestLoan,\n\n' +
+      'A new Loan Enquiry is received, please take a look:\n' +
+      '- Name: ' + (data.fullName || '-') + '\n' +
+      '- Mobile Number: ' + (data.mobile || '-') + '\n' +
+      '- Email: ' + (data.email || '-') + '\n' +
+      '- City: ' + (data.city || '-') + '\n' +
+      '- Loan Amount: ' + (data.amount || '-') + '\n' +
+      '- Salary Date: ' + (data.salaryDate || '-') + '\n' +
+      '- Address: ' + (data.address || '-') + '\n';
 
     // The row above is already committed, so a mail failure must not fail the
     // whole request. MailApp is capped at 100 emails/day on consumer accounts;
